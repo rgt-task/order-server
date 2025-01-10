@@ -1,2 +1,8 @@
-# order-server
-spring order server
+# 프로젝트 구조
+
+# 사용 기술 스텍
+
+# back end
+
+# 구현 방법
+
