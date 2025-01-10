@@ -30,7 +30,25 @@
 `queue`에 메세지가 들어오게 되면 그것을 읽음
 
 6. 읽어온 데이터를 websocket으로 연결된 클라이언트에게 브로드캐스팅으로 뿌려줍니다
+</br>
+</br>
+</br>
 
+
+# RabbitMq 사용 이유 서버를 나눈 이유
+- rabbitMq는 websocket서버 인스턴스를 늘려야될 때를 대비해서 사용했습니다
+</br>
+
+- 서버를 나눈것은  
+api서버, websocket서버로 역활을 분담하여  
+클라이언트가 많아서 websocket 연결이 많아져도  
+주문을 받는 것은 문제가 없도록 하기위해서 나누었습니다
+
+
+
+</br>
+</br>
+</br>
 
 # websocket을 위해 사용한 기술들
 
@@ -46,7 +64,7 @@ stomp을 사용하지 않는다면 WebSocket 세션 관리와 메시지 전송 �
 
 
 # back end
-- 디자인 패턴 : DDD 4 layered를 흉내내려고 노력하였습니다  
+- 디자인 패턴 : DDD 4 layered를 구현해보려 노력했습니다
 ![image](https://github.com/user-attachments/assets/3758f84a-c921-4b7d-9074-f2a6e7c1e7a7)
 
 # frontend
