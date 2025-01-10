@@ -7,14 +7,14 @@ import lombok.Getter;
 @Getter
 public class OrderCreateParam {
 
-	private String name;
+	private String food;
 	private int quantity;
 
 
 	public static OrderCreateParam from(OrderCreateRequest dto) {
 		OrderCreateParam orderCreateParam = new OrderCreateParam();
 
-		orderCreateParam.name = dto.name();
+		orderCreateParam.food = dto.food();
 		orderCreateParam.quantity = dto.quantity();
 		return orderCreateParam;
 

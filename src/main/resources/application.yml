@@ -10,8 +10,8 @@ spring:
 
 rabbitmq:
   queue:
-    name: sample-queue
+    name: order-queue
   exchange:
-    name: sample-exchange
+    name: amq.direct
   routing:
     key: key

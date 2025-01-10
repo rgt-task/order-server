@@ -1,6 +1,8 @@
 package com.test.rgt_task.order.infrastructure;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
@@ -12,11 +14,18 @@ public class MemoryOrderRepository implements OrderRepository {
 	private static Map<Long, Order> store = new HashMap<>();
 	private static long sequence = 0L;
 
+
+
 	@Override
 	public Order save(Order order) {
 		order.setId(++sequence);
 		store.put(order.getId(), order);
 		return order;
+	}
+
+	@Override
+	public List<Order> findAll() {
+		return new ArrayList<>(store.values());
 	}
 
 	@Override
