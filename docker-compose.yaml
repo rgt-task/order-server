@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.11.10-management
+    ports:
+      - "5672:5672"    # AMQP
+      - "15672:15672"  # RabbitMQ Management 콘솔
+      - "61613:61613"  # STOMP
+    command: >
+      sh -c "rabbitmq-plugins enable rabbitmq_stomp &&
+             rabbitmq-server"
